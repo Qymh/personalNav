@@ -1,7 +1,7 @@
 <template lang="jade">
   .nav
     .logoBox
-      img(class="animated bounceInUp"
+      img(class="animated"
         src="../../static/images/logo2.jpg")
     form.searchBox(target="_blank"
       action="http://www.baidu.com/baidu")

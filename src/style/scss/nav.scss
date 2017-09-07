@@ -1,101 +1,99 @@
 @import "../base/reset.scss";
-
-body{
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.logoBox{
-  margin-top: 5%;
-  @include displayFlex();
-  @include justify-content(center);
-  img{
-  }
-}
-
-.searchBox{
-  margin-top: 3%;
-  height: 38px;
-  @include displayFlex();
-  @include justify-content(center);
-  @include align-items(center);
-  input[type=text]{
+body {
     height: 100%;
-    width: 500px;
-    padding-left: 10px;
-    font-size: 17px;
-    border: 1px solid #b8b8b8;
-    box-sizing: border-box;
-  }
-  .send{
-    height:100%;
-    width: 102px;
-    line-height: 38px;
-    display: block;
-    text-align: center;
-    background-color: #38f;
+    width: 100%;
+    overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    color: $white;
-    border: 0;
-    cursor: pointer;
-  }
 }
 
-.webBox{
-  margin-top: 3%;
-  @include displayFlex();
-  @include justify-content(center);
-  @include align-items(center);
-  .web{
-    height: 100%;
-    width: 1100px;
-    .once{
-      width: 120px;
-      height: 120px; 
-      margin: 30px;
-      display: inline-block; 
-      background: #fff; 
-      border: 1px solid #ccc; 
-      position:relative; 
-      text-align:center;
-      cursor: pointer;
-      box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-      span{
-        width: 100%;
-        text-align: center;
-        display: inline-block;
-        img{
-          height: 50px;
-          width: 50px;
-        }
-        &:nth-of-type(1){
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-      }
-      &:after,
-      &:before{
-        content:"";
-        position:absolute; 
-        z-index:-1; 
-        box-shadow:0 0 20px rgba(0,0,0,0.8);
-        top:0; 
-        bottom:0;
-        left:10px; 
-        right:10px;
-        border-radius:100px / 10px;
-      }
-      &:after{
-        right:10px; 
-        left:auto;
-        -webkit-transform:skew(8deg) rotate(3deg); 
-        -moz-transform:skew(8deg) rotate(3deg);     
-        -ms-transform:skew(8deg) rotate(3deg);     
-        -o-transform:skew(8deg) rotate(3deg); 
-        transform:skew(8deg) rotate(3deg);
-      }
+.logoBox {
+    margin-top: 5%;
+    @include displayFlex();
+    @include justify-content(center);
+    img {}
+}
+
+.searchBox {
+    margin-top: 3%;
+    height: 38px;
+    @include displayFlex();
+    @include justify-content(center);
+    @include align-items(center);
+    input[type=text] {
+        height: 100%;
+        width: 500px;
+        padding-left: 10px;
+        font-size: 17px;
+        border: 1px solid #b8b8b8;
+        box-sizing: border-box;
     }
-  }
+    .send {
+        height: 100%;
+        width: 102px;
+        line-height: 38px;
+        display: block;
+        text-align: center;
+        background-color: #38f;
+        font-family: Arial, Helvetica, sans-serif;
+        color: $white;
+        border: 0;
+        cursor: pointer;
+    }
+}
+
+.webBox {
+    margin-top: 3%;
+    @include displayFlex();
+    @include justify-content(center);
+    @include align-items(center);
+    .web {
+        height: 100%;
+        width: 1100px;
+        .once {
+            width: 120px;
+            height: 120px;
+            margin: 30px;
+            display: inline-block;
+            background: #fff;
+            border: 1px solid #ccc;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
+            span {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+                &:nth-of-type(1) {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            &:after,
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+                top: 0;
+                bottom: 0;
+                left: 10px;
+                right: 10px;
+                border-radius: 100px / 10px;
+            }
+            &:after {
+                right: 10px;
+                left: auto;
+                -webkit-transform: skew(8deg) rotate(3deg);
+                -moz-transform: skew(8deg) rotate(3deg);
+                -ms-transform: skew(8deg) rotate(3deg);
+                -o-transform: skew(8deg) rotate(3deg);
+                transform: skew(8deg) rotate(3deg);
+            }
+        }
+    }
 }
