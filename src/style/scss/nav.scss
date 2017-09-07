@@ -45,7 +45,6 @@ body{
 
 .webBox{
   margin-top: 3%;
-  height: 300px;
   @include displayFlex();
   @include justify-content(center);
   @include align-items(center);

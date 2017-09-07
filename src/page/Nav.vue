@@ -30,30 +30,54 @@ export default {
     return {
       webs:[
         {
-          logo:'../../static/images/douyu.jpg',
+          logo:'../../static/images/douyu.png',
           href:'https://www.douyu.com',
           name:'斗鱼直播'
         },
         {
-          logo:'../../static/images/huya.jpg',
+          logo:'../../static/images/xiongmao.png',
+          href:'https://www.panda.tv',
+          name:'熊猫直播'
+        },
+        {
+          logo:'../../static/images/bilibili.png',
+          href:'https://www.bilibili.com',
+          name:'哔哩哔哩'
+        },
+        {
+          logo:'../../static/images/huya.png',
           href:"https://www.huya.com",
           name:'虎牙直播'
         },
         {
-          logo:'../../static/images/zhanqi.jpg',
+          logo:'../../static/images/zhanqi.png',
+          href:'http://www.zhanqi.tv',
           name:'战旗直播'
         },
         {
-          logo:'../../static/images/huomao.jpg',
+          logo:'../../static/images/huomao.png',
+          href:'https://www.huomao.com',
           name:'火猫直播'
         },
         {
-          logo:'../../static/images/xiongmao.jpg',
-          name:'熊猫直播'
+          logo:'../../static/images/pis.jpg',
+          href:'https://tieba.baidu.com/f?kw=pis&fr=ala0&tpl=5',
+          name:'pis吧'
         },
         {
-          logo:'../../static/images/bilibili.jpg',
-          name:'哔哩哔哩'
+          logo:'../../static/images/weibo.png',
+          href:'https://weibo.com',
+          name:'新浪微博'
+        },
+        {
+          logo:'../../static/images/douban.png',
+          href:'https://movie.douban.com',
+          name:'豆瓣电影'
+        },
+        {
+          logo:'../../static/images/jingdong.png',
+          href:'https://www.jd.com/',
+          name:'京东'
         },
       ]
     }
