@@ -7,7 +7,7 @@
         input.search#bdcsMain(type="text"
         v-model="inputVal" @keyup="searchVal($event)"
         @keydown.enter="enter"
-        @keydown.up="toUp" @keydown.down="toDown"
+        @keydown.up="toUp($event)" @keydown.down="toDown($event)"
         @click.prevent.stop="clear")
         ul.searchList
           li(:class="index==current?'focus':''" v-for="(list,index) in lists")
@@ -104,9 +104,12 @@ export default {
         return 
       }
 
+      // 原生js获取值 可在输入拼音时进行搜索
+      var val=document.getElementById('bdcsMain').value
+
       // jsonp跨域请求搜索数据
       this.$http.jsonp(
-        'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.inputVal,
+        'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+val,
         {
           jsonp:'cb'
         }).then(res=>{
@@ -116,9 +119,8 @@ export default {
       var $ul=document.getElementsByClassName('searchList')[0]
       $ul.style.display="block"
     },
-    //  隐藏搜索列表
+    // 隐藏搜索列表
     hideSearchList(){
-      console.log(1)
       var $ul=document.getElementsByClassName('searchList')[0]
       $ul.style.display="none"
     },
@@ -128,11 +130,18 @@ export default {
       $ul.style.display="block"
     },
     // 回车跳转
-    enter(){
+    enter(e){
       window.open('https://www.baidu.com/s?wd='+this.inputVal)
+
+      // 清空值
+      this.inputVal=''
+
+      // 隐藏搜索提示框
+      var $ul=document.getElementsByClassName('searchList')[0]
+      $ul.style.display="none"
     },
     // 按上箭
-    toUp(){
+    toUp(e){
       if(this.current>0){
         var $focus=document.querySelectorAll('.searchList li a')[this.current-1]
         var innerHTML=$focus.innerHTML.trim()
@@ -150,6 +159,11 @@ export default {
         this.current++
       }
     }
+  },
+  mounted () {
+    // 页面加载后进行文本框聚焦
+    var $input=document.getElementById('bdcsMain')
+    $input.focus()
   }
 
 }
