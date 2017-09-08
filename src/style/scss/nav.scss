@@ -19,13 +19,40 @@ body {
     @include displayFlex();
     @include justify-content(center);
     @include align-items(center);
-    input[type=text] {
+    .inputBox{
         height: 100%;
-        width: 500px;
-        padding-left: 10px;
-        font-size: 17px;
-        border: 1px solid #b8b8b8;
-        box-sizing: border-box;
+        input[type=text] {
+            height: 100%;
+            width: 500px;
+            padding-left: 5px;
+            font-size: 17px;
+            border: 1px solid #b8b8b8;
+            box-sizing: border-box;
+        }
+        .searchList{
+            position: absolute;
+            z-index: 100;
+            width: 500px;
+            background-color: #fff;
+            >li{
+                height: 26px;
+                line-height: 26px;
+                cursor: pointer;
+                padding-left: 5px;
+                >a{
+                    height: 100%;
+                    width: 100%;
+                    text-decoration: none;
+                    display: inline-block;
+                }
+                &.focus{
+                    background-color: #F0F0F0;
+                }
+                &:hover{
+                    background-color: #F0F0F0;
+                }
+            }
+        }
     }
     .send {
         height: 100%;
