@@ -2,10 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Nav from '../page/Nav'
 
-Vue.use(Router)
+Vue.use(Router,{
+  history:true
+})
 
 export default new Router({
-  mode:'history',
+  history:true,
   routes:[
     {
       path:'/',

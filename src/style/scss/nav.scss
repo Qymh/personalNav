@@ -1,126 +1,148 @@
 @import "../base/reset.scss";
+
 body {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../../static/images/bk.jpg');
 }
 
 .logoBox {
-    margin-top: 5%;
-    @include displayFlex();
-    @include justify-content(center);
-    img {}
+  position: absolute;
+  left: 5%;
+  top: 2%;
+  display: none;
+  img {
+
+  }
 }
 
 .searchBox {
-    margin-top: 3%;
-    height: 38px;
-    @include displayFlex();
-    @include justify-content(center);
-    @include align-items(center);
+  margin-top: 5%;
+  height: 38px;
+  @include displayFlex();
+  @include justify-content(center);
+  @include align-items(center);
     .inputBox{
+      height: 38px;
+      input[type=text] {
         height: 100%;
-        input[type=text] {
+        width: 500px;
+        padding-left: 10px;
+        font-size: 17px;
+        border: 1px solid #b8b8b8;
+        box-sizing: border-box;
+      }
+      .searchList{
+        position: absolute;
+        width: 500px;
+        background-color: #fff;
+        z-index: 100;
+        display: none;
+        li{
+          height: 30px;
+          font-size: 14px;
+          line-height: 30px;
+          cursor: pointer;
+          padding-left: 5px;
+          &:hover{
+            background-color: #F0F0F0;
+          }
+          >a{
+            display: inline-block;
+            width: 100%;
             height: 100%;
-            width: 500px;
-            padding-left: 5px;
-            font-size: 17px;
-            border: 1px solid #b8b8b8;
-            box-sizing: border-box;
+            text-decoration: none;
+          }
         }
-        .searchList{
-            position: absolute;
-            z-index: 100;
-            width: 500px;
-            background-color: #fff;
-            >li{
-                height: 26px;
-                line-height: 26px;
-                cursor: pointer;
-                padding-left: 5px;
-                >a{
-                    height: 100%;
-                    width: 100%;
-                    text-decoration: none;
-                    display: inline-block;
-                }
-                &.focus{
-                    background-color: #F0F0F0;
-                }
-                &:hover{
-                    background-color: #F0F0F0;
-                }
-            }
-        }
+      }
     }
-    .send {
-        height: 100%;
-        width: 102px;
-        line-height: 38px;
-        display: block;
-        text-align: center;
-        background-color: #38f;
-        font-family: Arial, Helvetica, sans-serif;
-        color: $white;
-        border: 0;
-        cursor: pointer;
-    }
+    
+  .send {
+    height: 100%;
+    width: 102px;
+    line-height: 38px;
+    display: block;
+    text-align: center;
+    background-color: #38f;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white;
+    border: 0;
+    cursor: pointer;
+  }
 }
 
-.webBox {
+.webCenter{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  @include displayFlex();
+  @include justify-content(center);
+  @include align-items(center);
+  .webBox {
     margin-top: 3%;
-    @include displayFlex();
-    @include justify-content(center);
-    @include align-items(center);
-    .web {
-        height: 100%;
-        width: 1100px;
+    height: 100%;
+    width: 900px;
+    position: relative;
+    overflow: hidden;
+    .webLimit{
+      position: absolute;
+      height: 400px;
+      width: 2000px;
+      .web {
+        height: 400px;
+        width: 900px;
+        padding-left: 8px;
+        float: left;
         .once {
-            width: 120px;
-            height: 120px;
-            margin: 30px;
-            display: inline-block;
-            background: #fff;
-            border: 1px solid #ccc;
-            position: relative;
+          width: 20%;
+          margin-top: 20px;
+          display: inline-block;
+          position: relative;
+          text-align: center;
+          z-index: 100;
+          cursor: default;
+          @include border-radius(50%);
+          span {
+            width: 100%;
+            margin-top: 10px;
             text-align: center;
+            display: inline-block;
+            font-weight: bold;
+            color: #fff;
+            font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.1) inset;
-            span {
-                width: 100%;
-                text-align: center;
-                display: inline-block;
-                img {
-                    height: 50px;
-                    width: 50px;
-                }
-                &:nth-of-type(1) {
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                }
+            img {
+                height: 100px;
+                width: 100px;
+                cursor: pointer;
+                @include border-radius(50%);
             }
-            &:after,
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-                top: 0;
-                bottom: 0;
-                left: 10px;
-                right: 10px;
-                border-radius: 100px / 10px;
+            &:nth-of-type(1) {
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
-            &:after {
-                right: 10px;
-                left: auto;
-                -webkit-transform: skew(8deg) rotate(3deg);
-                -moz-transform: skew(8deg) rotate(3deg);
-                -ms-transform: skew(8deg) rotate(3deg);
-                -o-transform: skew(8deg) rotate(3deg);
-                transform: skew(8deg) rotate(3deg);
-            }
+          }
         }
+      }
     }
+  }
+  .webPoint{
+    position: absolute;
+    bottom: 60px;
+    .point{
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin-left: 10px;
+      opacity: 0.5;
+      cursor: pointer;
+      background-color: deeppink;
+      @include border-radius(50%);
+      &.focus{
+        opacity: 1;
+      }
+    }
+  }
 }

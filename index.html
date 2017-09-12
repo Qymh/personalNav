@@ -3,15 +3,50 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Qymh导航">
-    <meta name="description" content="私人导航 Qymh个人主页www.qymh.org.cn">
-    <title>Qymh导航</title>
+    <meta name="keywords" content="Qymh个人导航">
+    <meta name="description" content="Qymh个人导航">
+    <title>Qymh搜索</title>
     <link rel="shortcut icon" href="static/images/q.ico" type="image/x-icon" />
 </head>
 
 <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+        window.onload=function(){
+            var target=document.getElementById('bdcsMain')
+
+            target.onkeyup=function(){
+                var val=target.value
+
+                //  动态获取并设置回调函数
+                var bdScript=document.createElement('script')
+                bdScript.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&cb=callback";  
+
+                // 动态变更 
+                document.body.appendChild(bdScript)  
+                document.body.removeChild(bdScript) 
+            }
+        }
+        // 回调函数
+        function callback(data){
+            var informations=data.s // 搜索的数据
+            var $ul=document.getElementsByClassName('searchList')[0]
+            var str='' // 数据合并
+
+            for(var i=0;i<informations.length;i++){
+                str+="\
+                <li>\
+                    <a href=https://www.baidu.com/s?wd="+informations[i]+">\
+                        "+informations[i]+"\
+                    </a>\
+                </li>"
+            }
+
+            $ul.innerHTML=str
+            $ul.style.display='block'
+        }
+    </script>
 </body>
 
 </html>
