@@ -114,6 +114,16 @@ export default {
             logo:'../../static/images/jingdong.png',
             href:'https://www.jd.com/',
             name:'京东'
+          },
+          {
+            logo:'../../static/images/taobao.png',
+            href:'https://www.taobao.com/',
+            name:'淘宝'
+          },
+          {
+            logo:'../../static/images/daxue.png',
+            href:'http://211.83.32.12/',
+            name:'成都工业学院'
           }
         ]
       ],
