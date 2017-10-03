@@ -4,7 +4,7 @@
       img(class="animated"
         src="../../static/images/logo2.jpg")
     form.searchBox(target="_blank"
-      action="http://www.baidu.com/baidu")
+      action="https://www.baidu.com/baidu")
       .inputBox
         input(type="text"
           name="word"
