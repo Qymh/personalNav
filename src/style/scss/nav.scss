@@ -150,6 +150,8 @@ body {
   }
   .webPoint{
     position: absolute;
+    left:50%;
+    margin-left:-30px;
     bottom: 60px;
     .point{
       display: inline-block;

@@ -286,13 +286,11 @@ export default {
       if(innerDate-this.outerDate>200){
           // 控制滚动滑屏
         function wheelEvent(){
-
+          $spans.forEach(($span)=>{
+            $span.setAttribute('class','point')
+          })
+          
           if(e.wheelDelta){
-
-            $spans.forEach(($span)=>{
-              $span.setAttribute('class','point')
-            })
-
             if(e.wheelDelta<0){
              Velocity($limit,{
                left:-$width+'px'
@@ -308,13 +306,12 @@ export default {
              },{
                duration:200
              })
-             
              $spans[0].setAttribute('class','point focus')
             }
           }
 
           else if(e.detail){
-            if(e.detail>0&&top>-limit){
+            if(e.detail>0){
               Velocity($limit,{
                 left:-$width+'px'
               },{
@@ -323,7 +320,7 @@ export default {
 
             $spans[1].setAttribute('class','point focus')
 
-            }else if(e.detail<0&&top<0){
+            }else if(e.detail<0){
               Velocity($limit,{
                 left:0
               },{
