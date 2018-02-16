@@ -79,9 +79,9 @@ export default {
             name:'虎牙直播'
           },
           {
-            logo:'../../static/images/zhanqi.png',
-            href:'http://www.zhanqi.tv',
-            name:'战旗直播'
+            logo:'../../static/images/yy.jpg',
+            href:'http://www.yy.com',
+            name:'yy直播'
           },
           {
             logo:'../../static/images/pis.jpg',
@@ -104,10 +104,10 @@ export default {
             name:'豆瓣电影'
           },
           {
-            logo:'../../static/images/huomao.png',
-            href:'https://www.huomao.com',
-            name:'火猫直播'
-          },
+            logo:'../../static/images/zhanqi.png',
+            href:'https://www.zhanqi.tv',
+            name:'战旗直播'
+          }
         ],
         [
           {
@@ -124,6 +124,11 @@ export default {
             logo:'../../static/images/daxue.png',
             href:'http://211.83.32.12/',
             name:'成都工业学院'
+          },
+          {
+            logo:'../../static/images/huomao.png',
+            href:'https://www.huomao.com',
+            name:'火猫直播'
           }
         ]
       ],
